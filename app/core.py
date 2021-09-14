@@ -40,7 +40,11 @@ class Storage(ABC):
         ...
 
     @abstractmethod
-    def add_attachment(self, order: Order, attachment: Path):
+    def add_attachment(self, order: Order, attachment: Path):  # pragma: no cover
+        ...
+
+    @abstractmethod
+    def is_exists(self, order: Order) -> bool:  # pragma: no cover
         ...
 
 

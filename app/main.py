@@ -11,8 +11,11 @@ logger = logging.getLogger()
 
 def process(eml_path: Path, storage: Storage) -> Order:
     order = EmailParser().parse(eml_path)
-    storage.add_order(order)
-    storage.add_attachment(order, eml_path)
+    if not storage.is_exists(order):
+        storage.add_order(order)
+        storage.add_attachment(order, eml_path)
+    else:
+        logger.warning(f"{order.order_id} already exists")
 
     return order
 
@@ -20,12 +23,14 @@ def process(eml_path: Path, storage: Storage) -> Order:
 def run(config: str, email: str):
     config = Config(Path(config))
     storage = ExcelStorage(config)
-    order = process(Path(email), storage)
 
-    logger.info(f"{order.order_id} processed")
+    process(Path(email), storage)
 
 
 def bulk(config: str, emails: str):
     dir = Path(emails)
     for email in dir.rglob("*.eml"):
-        run(config, str(email))
+        try:
+            run(config, str(email))
+        except Exception:
+            logger.warning(f"{email} not processed")

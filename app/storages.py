@@ -53,6 +53,11 @@ class ExcelStorage(Storage):
 
         return ws
 
+    def is_exists(self, order: Order) -> bool:
+        return Path(
+            self._get_cwd(order), order.date.strftime("%m"), str(order.order_id)
+        ).is_dir()
+
     def add_order(self, order: Order):
         wb = self._get_wb_by_order(order)
         ws = self._get_ws_by_order(order, wb)
@@ -65,11 +70,11 @@ class ExcelStorage(Storage):
             order.description,
         ]
         ws.append(order_as_row)
-        logger.info(f"order {order.order_id} added!")
+        logger.info(f"{order.order_id} added")
         wb.save(self._get_wb_path(order))
 
     def add_attachment(self, order: Order, attachment: Path):
         path = self._get_cwd(order)
-        cwd = Path(path, str(order.order_id))
+        cwd = Path(path, order.date.strftime("%m"), str(order.order_id))
         cwd.mkdir(parents=True, exist_ok=True)
         shutil.copy(attachment, cwd)
