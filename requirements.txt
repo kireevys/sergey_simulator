@@ -1,0 +1,8 @@
+pytest==6.2.5
+coverage==5.5
+openpyxl==3.0.8
+pydantic==1.8.2
+PyYAML==5.4.1
+fire==0.4.0
+
+eml_parser==1.14.8

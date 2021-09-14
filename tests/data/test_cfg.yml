@@ -1,0 +1,7 @@
+TEMPLATE:
+  ROOT: ../../templates
+  TEMPLATES:
+    - orders: orders_book_template.xlsx
+
+STORAGE:
+  ROOT: storage

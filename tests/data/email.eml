@@ -1,0 +1,1163 @@
+Delivered-To: ktoinditex2020@gmail.com
+Received: by 2002:ae9:c104:0:0:0:0:0 with SMTP id z4csp5273450qki;
+        Tue, 7 Sep 2021 23:52:39 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJz4gKZyrRWUvOLMlyWPurnC8R6jeHTcOZUAXEb8XaI8p39dQPZMppXVDJkafhW7AiOtlkut
+X-Received: by 2002:a05:6402:759:: with SMTP id p25mr2251317edy.89.1631083959133;
+        Tue, 07 Sep 2021 23:52:39 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1631083959; cv=none;
+        d=google.com; s=arc-20160816;
+        b=J4d0E3SvA9JOyMNqaSLF/ormWebC4SNodFWg22WR2XSeCGyKbdr7ZWcmCxp1oiLgpk
+         SArP5wEuYEuUYpOvNsQlDpDYHRIoQv2Hp5PcOWTvZ35mXolY8lIuue+ckBDQLBdi/HxM
+         3R5SL7b4Y6bbvezyKQcKJ3ME+uTYnb7PENc92HhbYYURf5dHuzaZNSZfs7pY8sbE0ofI
+         2AXq6ML90vLspyh3ynktv0F3ErxZ2uns/aQaNZ4ccTyMNlYChG5nLnZydEt66Ocb4KiF
+         5tEOwDlgAMn4WtYv1zldow/Lpmvcurr7bwRes50EpgEgp9ShA529Ee+ui1PUvhCN7Ndf
+         7f+w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:subject:message-id:cc:to
+         :from:date:dkim-signature;
+        bh=zrt3bWXmG0EgUpaLDzmQhlaAi8lafPAPbuICm4oBICA=;
+        b=je6RT9utdqn6dXNHLbgmi+5LSEnOE5R3ij0l67u+jR/qYfRpZ2lA01Ewf6/khW/jDb
+         oDWTcNDwFrGMoK6JmPemSq6Eg/Hx4Fx9GYu5njqJgrpPW+6PJf9R0cMGjH17uNNhSqWa
+         CbPlr3mnP3RvarWCN4c/jinrtoCCzXhHTGdVyUTJk1Lxd1g1oLZliDDDdxIuy8a3daSY
+         HPlDfsQUjD4kqpLvc3dnpPDv31qMqPZNHRNOt945vGqL+iVN78/qyVUxcYS6SIUH62R5
+         Vza+aYwmckfK7QSWiHBJ6WuHlCA1xRnc9j/dkcK4i4wNn3D+8XEiJ417Ka+y9PVlo0sR
+         PwmQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@inditex.com header.s=ItxDkimInditexCOM12022019 header.b=k+09+KGf;
+       spf=pass (google.com: domain of noreply.sficompras@inditex.com designates 195.245.230.65 as permitted sender) smtp.mailfrom=noreply.sficompras@inditex.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=inditex.com
+Return-Path: <noreply.sficompras@inditex.com>
+Received: from mail1.bemta25.messagelabs.com (mail1.bemta25.messagelabs.com. [195.245.230.65])
+        by mx.google.com with ESMTPS id l7si1906670edk.342.2021.09.07.23.52.38
+        for <ktoinditex2020@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 07 Sep 2021 23:52:39 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply.sficompras@inditex.com designates 195.245.230.65 as permitted sender) client-ip=195.245.230.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@inditex.com header.s=ItxDkimInditexCOM12022019 header.b=k+09+KGf;
+       spf=pass (google.com: domain of noreply.sficompras@inditex.com designates 195.245.230.65 as permitted sender) smtp.mailfrom=noreply.sficompras@inditex.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=inditex.com
+Return-Path: <noreply.sficompras@inditex.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=inditex.com;
+	s=ItxDkimInditexCOM12022019; t=1631083957; i=@inditex.com;
+	bh=zrt3bWXmG0EgUpaLDzmQhlaAi8lafPAPbuICm4oBICA=;
+	h=Date:From:To:CC:Message-ID:Subject:MIME-Version:Content-Type:
+	 Content-Transfer-Encoding;
+	b=k+09+KGfKJ8JgQN/ebVdJLiNyN6Y4mvEEo4w/nCBvc3ZM1HRtCHh+bOJruUbP1OzB
+	 wNxOFesYiqCOozWCLFwbWoqpngjfke/X0JgVq/Fn101FTDbuw9xhUfQT36dehCT7dP
+	 1gXLtqlrbt8eWmdTGBWyil/Nz7IzCTquFfOZn0l2dLqsC4XBcdQWpMgwniWIg6Uw+X
+	 AanV7Ng2gdlRMQQObUNNgyHxOhl0vfpETyhEXYaL76ZpT4QiZ4IaVdvLSYe6VTgXA1
+	 aJ85Z+nN+Agirm1llNIVPDAmaPBtRmeZrkXSd4+kkYoGIFU01qVmZrvZZyLcvvTxF0
+	 smiOLAzYbA21w==
+Received: from [100.112.199.201] (using TLSv1.2 with cipher DHE-RSA-AES256-GCM-SHA384 (256 bits))
+	by server-1.bemta.az-b.eu-west-1.aws.symcld.net id 9E/9D-30018-5BD58316; Wed, 08 Sep 2021 06:52:37 +0000
+X-Brightmail-Tracker: H4sIAAAAAAAAA+NgFvrJIsWRWlGSWpSXmKPExsVy2HehuO7mWIt
+  Eg4/vTC0+dF1jdGD02DnrLnsAYxRrZl5SfkUCa8aGrRdYC7afZ674/JKvgfHdcqYuRk4OIYEt
+  jBJr1sZ0MXIB2UcYJf42rmWGcC4ySiy42MwGUsUioCIx/ekRVhCbTcBR4lD/NLC4iICcxL4la
+  xlBbGYBWYn1S1+CxXkFIiWuPFzCAmILC2hK7DnznBEiLihxcuYTFoh6DYkFd/ZB9WpLLFv4mh
+  niIm2JO/8WgtkSAtYSf/5sZISxp/YtZ53AyD8LyahZSEbNQjJqASPzKkaLpKLM9IyS3MTMHF1
+  DAwNdQ0MjXUNLC11DCzO9xCrdJL3UUt3y1OISXUO9xPJiveLK3OScFL281JJNjMBQTSk4tmsH
+  49vXH/QOMUpyMCmJ8tp6WiQK8SXlp1RmJBZnxBeV5qQWH2KU4eBQkuBVjQbKCRalpqdWpGXmA
+  OMGJi3BwaMkwqsSCZTmLS5IzC3OTIdInWKM5Th8bfEiZo6XC5cAyTOrQORHMPkdTP4AkzM2gM
+  imDyDy24TvK5mFWPLy81KlxHn5YoCGCoAMzSjNg1sJSxGXGGWlhHkZGRgYhHgKUotyM0tQ5V8
+  xinMwKgnz5oNM4cnMK4G77BXQ0UxAR7c9NAE5uiQRISXVwLSn1e+Q0ucS8dMR3zebF1lvDDDR
+  eXByutEGeYfASXcFz3ElKEabW6gtCZ8lvGDxFI00mzsaB9iPzr7MvuKsQdjbx/019Wvydt8Sf
+  7adQ/GZ+VKhc1EGN1va6166dryy/+XzMkLdPV3Ki/9V+EddK7u6j9OleaQzUqv9DRYt09DdkK
+  jJWvTG2/KOesPdW5dPR0T6pWU8WBOWaHN9x9tkSwmPuddfTnIKubDoStry3zMui9yardDX7Hf
+  k8Q+hg3pRfJ0PLtxL7PsQ5Pug7xpbmeviM89vmUwNVg99fvPCqXl2fxt/SZjwX7jwNrQ460nw
+  vqfbfKtXvX9a5fh31pQHUe0znF3CC+au8HHao9j/6LcSS3FGoqEWc1FxIgCC8HaXjAMAAA==
+X-Env-Sender: noreply.sficompras@inditex.com
+X-Msg-Ref: server-22.tower-282.messagelabs.com!1631083955!150531!1
+X-Originating-IP: [195.77.161.23]
+X-SYMC-ESS-Client-Auth: outbound-route-from=pass
+X-StarScan-Received:
+X-StarScan-Version: 9.81.4; banners=-,-,-
+X-VirusChecked: Checked
+Received: (qmail 32160 invoked from network); 8 Sep 2021 06:52:35 -0000
+Received: from 23.red-195-77-161.customer.static.ccgg.telefonica.net (HELO smtp.inditex.com) (195.77.161.23)
+  by server-22.tower-282.messagelabs.com with SMTP; 8 Sep 2021 06:52:35 -0000
+Received: from AXINEXDESP07.central.inditex.grp (10.110.10.69) by
+ smtp.inditex.com (172.24.25.27) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.23; Wed, 8 Sep 2021 08:52:35 +0200
+Received: from AXINEXCUSR05.central.inditex.grp (10.110.10.13) by
+ AXINEXDESP07.central.inditex.grp (10.110.10.69) with Microsoft SMTP Server
+ (TLS) id 15.0.1497.23; Wed, 8 Sep 2021 08:52:34 +0200
+Received: from axinwas9.central.inditex.grp (10.110.37.50) by
+ AXINEXCUSR05.central.inditex.grp (10.110.10.13) with Microsoft SMTP Server id
+ 15.0.1497.23 via Frontend Transport; Wed, 8 Sep 2021 08:52:34 +0200
+Date: Wed, 8 Sep 2021 08:52:34 +0200
+From: Compras Indirectas Inditex <noreply.sficompras@inditex.com>
+To: <ktoinditex2020@gmail.com>
+CC: <yuliapi@ext.inditex.com>
+Message-ID: <165939684.357021631083954971.JavaMail.wasadmin@axinwas9.central.inditex.grp>
+Subject: Purchase Order no. 12747295 sent
+MIME-Version: 1.0
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+X-EXCLAIMER-MD-CONFIG: 2160d8f7-699a-4cd6-bec4-c5bf2dcaa7f8
+X-EXCLAIMER-MD-CONFIG: a067920a-1928-4024-9272-e7ba21410a24
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+=09<head>
+=09=09<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8">
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1.0">
+=09=09<meta name=3D"format-detection" content=3D"telephone=3Dno">
+=09=09<title></title>
+       =20
+        <style type=3D"text/css">
+/* Generated by less 2.5.1 */
+/* reset */
+#outlook a {
+  padding: 0;
+}
+body {
+  width: 100% !important;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+}
+.ExternalClass {
+  width: 100%;
+}
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div {
+  line-height: 100%;
+}
+#backgroundTable {
+  margin: 0;
+  padding: 0;
+  width: 100% !important;
+  line-height: 100% !important;
+}
+img {
+  outline: none;
+  text-decoration: none;
+  -ms-interpolation-mode: bicubic;
+}
+a img {
+  border: none;
+}
+.image_fix {
+  display: block;
+}
+p {
+  margin: 1em 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: black !important;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: blue !important;
+}
+h1 a:active,
+h2 a:active,
+h3 a:active,
+h4 a:active,
+h5 a:active,
+h6 a:active {
+  color: red !important;
+}
+h1 a:visited,
+h2 a:visited,
+h3 a:visited,
+h4 a:visited,
+h5 a:visited,
+h6 a:visited {
+  color: purple !important;
+}
+table {
+  border-collapse: collapse;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+/* Only embedded
+table td {border-collapse: collapse;}
+*/
+a {
+  color: black;
+}
+
+</style>
+       =20
+               =20
+=09</head>
+
+=09<body>
+   =20
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" id=3D"backgroundTab=
+le" style=3D"font-family: 'Century Gothic', CenturyGothic, AppleGothic, Ari=
+al, Helvetica, sans-serif; font-size: 12px; line-height: 15px; color: black=
+; background-color: #d9d9d9;">
+    <tr>
+        <td class=3D"background-table-cell" style=3D"border-collapse: colla=
+pse; padding: 50px;"><table width=3D"650" align=3D"center" valign=3D"top" c=
+ellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"main-wrap-table" s=
+tyle=3D"background: #ffffff; width: 650px;">
+                <tr>
+                    <td height=3D"40" class=3D"spacer-cell" style=3D"border=
+-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                </tr>
+                <!-- Logo -->
+                <tr>
+                    <td style=3D"border-collapse: collapse;"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                            <tr>
+                                <td class=3D"text-align-center" style=3D"bo=
+rder-collapse: collapse; text-align: center;">
+                                                        =09<img src=3D"http=
+s://extranet-na.inditex.com/FINCAPPWEB-CAPortal/api/public/documentos/desca=
+rgarNas.htm?dir=3DimagenesCorreo/logos&file=3Dlogo-massimodutti.png" alt=3D=
+"" class=3D"image_fix">
+                            =09=09=09=09=09=09=09=09</td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <tr>
+                    <td height=3D"40" class=3D"spacer-cell" style=3D"border=
+-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                </tr>
+                <!-- /Logo -->
+           =20
+                <!-- Mensaje -->
+                <tr>
+                    <td style=3D"border-collapse: collapse;"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"body-bg=
+-color" style=3D"background-color: #d9d9d9;">
+                            <tr>
+                                <td height=3D"7" class=3D"spacer-cell" styl=
+e=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                            </tr>
+                            <tr>
+                                <td style=3D"border-collapse: collapse;"><p=
+ class=3D"text font-size-xs text-align-center" style=3D"margin: 0 0 0 0; fo=
+nt-family: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, =
+sans-serif; font-size: 10px; line-height: 13px; mso-line-height-rule: exact=
+ly; color: black; text-align: center;">=D0=9D=D0=B0=D1=81=D1=82=D0=BE=D1=8F=
+=D1=89=D0=B8=D0=BC =D1=8D=D0=BB=D0=B5=D0=BA=D1=82=D1=80=D0=BE=D0=BD=D0=BD=
+=D1=8B=D0=BC =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=BE=D0=BC =D0=BC=D1=8B =D0=BD=
+=D0=B0=D0=BF=D1=80=D0=B0=D0=B2=D0=BB=D1=8F=D0=B5=D0=BC =D0=92=D0=B0=D0=BC =
+=D1=81=D0=BB=D0=B5=D0=B4=D1=83=D1=8E=D1=89=D0=B8=D0=B9 =D0=97=D0=B0=D0=BA=
+=D0=B0=D0=B7 =D0=BD=D0=B0 =D0=BF=D0=BE=D0=BA=D1=83=D0=BF=D0=BA=D1=83:</p></=
+td>
+                            </tr>
+                            <tr>
+                                <td height=3D"7" class=3D"spacer-cell" styl=
+e=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <tr>
+                    <td height=3D"20" class=3D"spacer-cell" style=3D"border=
+-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                </tr>
+                <!-- /Mensaje -->
+               =20
+                <!-- Datos pedido -->
+                <tr>
+                    <td style=3D"border-collapse: collapse;"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                            <tr>
+                                <td width=3D"28" class=3D"spacer-cell" styl=
+e=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                                <td style=3D"border-collapse: collapse;"><t=
+able class=3D"table-layout-fixed" width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0" style=3D"table-layout: fixed;">
+                                        <tr>
+                                            <td width=3D"15%" style=3D"bord=
+er-collapse: collapse; border: solid 1px #d9d9d9; vertical-align: bottom;di=
+splay: table-cell;"><table class=3D"box-table" width=3D"100%" cellpadding=
+=3D"3" cellspacing=3D"0" border=3D"0">
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text" style=3D"margin: 0 0 0 0; font-fami=
+ly: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans-se=
+rif; font-size: 8px; mso-line-height-rule: exactly; color: black; line-heig=
+ht: 20px;">=D0=97=D0=B0=D0=BA=D0=B0=D0=B7 =D0=BD=D0=B0 =D0=BF=D0=BE=D0=BA=
+=D1=83=D0=BF=D0=BA=D1=83</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text font-size-xl font-weight-bold" style=
+=3D"margin: 0 0 0 0; font-family: 'Century Gothic', CenturyGothic, AppleGot=
+hic, Arial, Helvetica, sans-serif; font-size: 10px; mso-line-height-rule: e=
+xactly; color: black; font-weight: bold; line-height: 20px;">12747295</p></=
+td>
+                                                    </tr>
+                                                </table></td>
+                                            <td width=3D"1%" class=3D"space=
+r-cell" style=3D"border-collapse: collapse; font-size: 1px; line-height: 1p=
+x;"></td>
+                                            <td width=3D"15%" style=3D"bord=
+er-collapse: collapse; border: solid 1px #d9d9d9; vertical-align: bottom;di=
+splay: table-cell;"><table class=3D"box-table" width=3D"100%" cellpadding=
+=3D"3" cellspacing=3D"0" border=3D"0">
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text" style=3D"margin: 0 0 0 0; font-fami=
+ly: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans-se=
+rif; font-size: 8px; mso-line-height-rule: exactly; color: black; line-heig=
+ht: 20px;">=D0=94=D0=B0=D1=82=D0=B0</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text font-size-xl font-weight-bold" style=
+=3D"margin: 0 0 0 0; font-family: 'Century Gothic', CenturyGothic, AppleGot=
+hic, Arial, Helvetica, sans-serif; font-size: 10px; mso-line-height-rule: e=
+xactly; color: black; font-weight: bold; line-height: 20px;">08/09/2021</p>=
+</td>
+                                                    </tr>
+                                                </table></td>
+                                                                           =
+                                                         <td width=3D"1%" c=
+lass=3D"spacer-cell" style=3D"border-collapse: collapse; font-size: 1px; li=
+ne-height: 1px;"></td>
+                                            <td width=3D"15%" style=3D"bord=
+er-collapse: collapse; border: solid 1px #d9d9d9; vertical-align: bottom;di=
+splay: table-cell;"><table class=3D"box-table" width=3D"100%" cellpadding=
+=3D"3" cellspacing=3D"0" border=3D"0">
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text" style=3D"margin: 0 0 0 0; font-fami=
+ly: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans-se=
+rif; font-size: 8px; mso-line-height-rule: exactly; color: black; line-heig=
+ht: 20px;">=D0=A1=D1=80=D0=BE=D1=87=D0=BD=D0=BE=D1=81=D1=82=D1=8C</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text font-size-xl font-weight-bold" style=
+=3D"margin: 0 0 0 0; font-family: 'Century Gothic', CenturyGothic, AppleGot=
+hic, Arial, Helvetica, sans-serif; font-size: 10px; mso-line-height-rule: e=
+xactly; color: black; font-weight: bold; line-height: 20px;">C=D1=80=D0=BE=
+=D1=87=D0=BD=D1=8B=D0=B9</p></td>
+                                                    </tr>
+                                                </table></td>
+                                                                           =
+                                                     </tr>
+                                    </table></td>
+                                <td width=3D"28" class=3D"spacer-cell" styl=
+e=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <tr>
+                    <td height=3D"20" class=3D"spacer-cell" style=3D"border=
+-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                </tr>
+                <!-- /Datos pedido -->
+           =20
+                <!-- Informaci=C3=B3n -->
+                <tr>
+                    <td style=3D"border-collapse: collapse;"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                            <tr>
+                                <td width=3D"28" class=3D"spacer-cell" styl=
+e=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                                <td style=3D"border-collapse: collapse;"><t=
+able width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                                        <tr>
+                                            <td width=3D"50%" valign=3D"top=
+" style=3D"border-collapse: collapse;"><table width=3D"100%" cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0">
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text font-weight-bold" style=3D"margin: 0=
+ 0 0 0; font-family: 'Century Gothic', CenturyGothic, AppleGothic, Arial, H=
+elvetica, sans-serif; font-size: 12px; line-height: 15px; mso-line-height-r=
+ule: exactly; color: black; font-weight: bold;">=D0=9E=D0=BF=D0=B8=D1=81=D0=
+=B0=D0=BD=D0=B8=D0=B5</p></td>
+                                                    </tr>
+                                                                           =
+                             <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text" style=3D"margin: 0 0 0 0; font-fami=
+ly: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans-se=
+rif; font-size: 12px; line-height: 15px; mso-line-height-rule: exactly; col=
+or: black;">=D0=BF=D1=80=D0=B8=D0=BA=D0=BB=D0=B5=D0=B8=D1=82=D1=8C =D1=81=
+=D1=82=D0=B8=D0=BA=D0=B5=D1=80 =D0=BD=D0=B0 =D0=B2=D0=B8=D1=82=D1=80=D0=B8=
+=D0=BD=D1=83</p></td>
+                                                    </tr>
+                                                                           =
+                         </table></td>
+                                            <td width=3D"50%" valign=3D"top=
+" style=3D"border-collapse: collapse;"><table width=3D"100%" cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0">
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text font-weight-bold" style=3D"margin: 0=
+ 0 0 0; font-family: 'Century Gothic', CenturyGothic, AppleGothic, Arial, H=
+elvetica, sans-serif; font-size: 12px; line-height: 15px; mso-line-height-r=
+ule: exactly; color: black; font-weight: bold;">=D0=94=D0=BE=D0=BF=D0=BE=D0=
+=BB=D0=BD=D0=B8=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=D0=B0=D1=8F =D0=B8=D0=BD=D1=
+=84=D0=BE=D1=80=D0=BC=D0=B0=D1=86=D0=B8=D1=8F</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text" style=3D"margin: 0 0 0 0; font-fami=
+ly: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans-se=
+rif; font-size: 12px; line-height: 15px; mso-line-height-rule: exactly; col=
+or: black;"></p></td>
+                                                    </tr>
+                                                </table></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=3D"3" height=3D"20"=
+ class=3D"spacer-cell spacer-solid-gray-bottom" style=3D"border-collapse: c=
+ollapse; font-size: 1px; line-height: 1px; border-bottom: solid 1px #d9d9d9=
+;"></td>
+                                        </tr>
+                                    </table></td>
+                                <td width=3D"28" class=3D"spacer-cell" styl=
+e=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <tr>
+                    <td height=3D"20" class=3D"spacer-cell" style=3D"border=
+-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                </tr>
+                <!-- /Informaci=C3=B3n -->
+           =20
+                <!-- Datos cliente -->
+                <tr>
+                    <td style=3D"border-collapse: collapse;"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                            <tr>
+                                <td width=3D"28" class=3D"spacer-cell" styl=
+e=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                                <td style=3D"border-collapse: collapse;"><t=
+able width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                                        <tr>
+                                            <td width=3D"50%" valign=3D"top=
+" style=3D"border-collapse: collapse;"><table width=3D"100%" cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0">
+                                                    =09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text font-weight-bold" style=3D"margin: 0=
+ 0 0 0; font-family: 'Century Gothic', CenturyGothic, AppleGothic, Arial, H=
+elvetica, sans-serif; font-size: 12px; line-height: 15px; mso-line-height-r=
+ule: exactly; color: black; font-weight: bold;">=D0=9F=D0=BB=D0=B0=D1=82=D0=
+=B5=D0=BB=D1=8C=D1=89=D0=B8=D0=BA</p></td>
+                                                    </tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+=09                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text" style=3D"margin: 0 0 0 0; font-fami=
+ly: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans-se=
+rif; font-size: 12px; line-height: 15px; mso-line-height-rule: exactly; col=
+or: black;">LLC MASSIMO DUTTI </p></td>
+                                                    </tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09                                    =
+                <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text font-weight-bold" style=3D"margin: 0=
+ 0 0 0; font-family: 'Century Gothic', CenturyGothic, AppleGothic, Arial, H=
+elvetica, sans-serif; font-size: 12px; line-height: 15px; mso-line-height-r=
+ule: exactly; color: black; font-weight: bold;">=D0=97=D0=B0=D0=BA=D0=B0=D0=
+=B7=D1=87=D0=B8=D0=BA</p></td>
+                                                    </tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09                                    =
+                <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text" style=3D"margin: 0 0 0 0; font-fami=
+ly: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans-se=
+rif; font-size: 12px; line-height: 15px; mso-line-height-rule: exactly; col=
+or: black;">LLC MASSIMO DUTTI </p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height=3D"10" c=
+lass=3D"spacer-cell" style=3D"border-collapse: collapse; font-size: 1px; li=
+ne-height: 1px;"></td>
+                                                    </tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text font-weight-bold" style=3D"margin: 0=
+ 0 0 0; font-family: 'Century Gothic', CenturyGothic, AppleGothic, Arial, H=
+elvetica, sans-serif; font-size: 12px; line-height: 15px; mso-line-height-r=
+ule: exactly; color: black; font-weight: bold;">=D0=A6=D0=B5=D0=BD=D1=82=D1=
+=80 =D0=B7=D0=B0=D0=BA=D1=83=D0=BF=D0=BE=D0=BA</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text" style=3D"margin: 0 0 0 0; font-fami=
+ly: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans-se=
+rif; font-size: 12px; line-height: 15px; mso-line-height-rule: exactly; col=
+or: black;">500 - SERVICIOS GENERALES RUSIA</p></td>
+                                                    </tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+                                                        <td height=3D"10" c=
+lass=3D"spacer-cell" style=3D"border-collapse: collapse; font-size: 1px; li=
+ne-height: 1px;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text font-weight-bold" style=3D"margin: 0=
+ 0 0 0; font-family: 'Century Gothic', CenturyGothic, AppleGothic, Arial, H=
+elvetica, sans-serif; font-size: 12px; line-height: 15px; mso-line-height-r=
+ule: exactly; color: black; font-weight: bold;">=D0=9C=D0=B5=D0=BD=D0=B5=D0=
+=B4=D0=B6=D0=B5=D1=80 =D0=BF=D0=BE =D0=B7=D0=B0=D0=BA=D1=83=D0=BF=D0=BA=D0=
+=B0=D0=BC</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text" style=3D"margin: 0 0 0 0; font-fami=
+ly: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans-se=
+rif; font-size: 12px; line-height: 15px; mso-line-height-rule: exactly; col=
+or: black;">Yulia Piskovaya</p></td>
+                                                    </tr>
+
+                                                                           =
+                             <tr>
+                                                        <td height=3D"10" c=
+lass=3D"spacer-cell" style=3D"border-collapse: collapse; font-size: 1px; li=
+ne-height: 1px;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text font-weight-bold" style=3D"margin: 0=
+ 0 0 0; font-family: 'Century Gothic', CenturyGothic, AppleGothic, Arial, H=
+elvetica, sans-serif; font-size: 12px; line-height: 15px; mso-line-height-r=
+ule: exactly; color: black; font-weight: bold;">=D0=97=D0=B0=D1=8F=D0=B2=D0=
+=B8=D1=82=D0=B5=D0=BB=D1=8C</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text" style=3D"margin: 0 0 0 0; font-fami=
+ly: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans-se=
+rif; font-size: 12px; line-height: 15px; mso-line-height-rule: exactly; col=
+or: black;">=D1=80=D1=83=D1=81=D0=BB=D0=B0=D0=BD</p></td>
+                                                    </tr>
+                                                                           =
+                         </table></td>
+                                            <td width=3D"50%" valign=3D"top=
+" style=3D"border-collapse: collapse;">
+                                                                           =
+                     <table width=3D"100%" cellpadding=3D"0" cellspacing=3D=
+"0" border=3D"0">
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text font-weight-bold" style=3D"margin: 0=
+ 0 0 0; font-family: 'Century Gothic', CenturyGothic, AppleGothic, Arial, H=
+elvetica, sans-serif; font-size: 12px; line-height: 15px; mso-line-height-r=
+ule: exactly; color: black; font-weight: bold;">=D0=9C=D0=B5=D1=81=D1=82=D0=
+=BE =D0=BD=D0=B0=D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D1=8F</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text" style=3D"margin: 0 0 0 0; font-fami=
+ly: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans-se=
+rif; font-size: 12px; line-height: 15px; mso-line-height-rule: exactly; col=
+or: black;">4734 / MOS-JUNE MYTISHI /  MIRA - 51 - Postal Code:141008 - =D0=
+=9C=D0=AB=D0=A2=D0=98=D0=A9=D0=98 - =D0=9C=D0=9E=D0=A1=D0=9A=D0=9E=D0=92=D0=
+=A1=D0=9A=D0=90=D0=AF =D0=9E=D0=91=D0=9B=D0=90=D0=A1=D0=A2=D0=AC (=D0=A0=D0=
+=9E=D0=A1=D0=A1=D0=98=D0=AF) 7-495-2584955</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height=3D"10" c=
+lass=3D"spacer-cell" style=3D"border-collapse: collapse; font-size: 1px; li=
+ne-height: 1px;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><table width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0">
+                                                                <tr>
+                                                                    <td wid=
+th=3D"70%" style=3D"border-collapse: collapse;"><p class=3D"text font-weigh=
+t-bold" style=3D"margin: 0 0 0 0; font-family: 'Century Gothic', CenturyGot=
+hic, AppleGothic, Arial, Helvetica, sans-serif; font-size: 12px; line-heigh=
+t: 15px; mso-line-height-rule: exactly; color: black; font-weight: bold;">=
+=D0=9E=D0=B6=D0=B8=D0=B4=D0=B0=D0=B5=D0=BC=D0=B0=D1=8F =D0=B4=D0=B0=D1=82=
+=D0=B0 =D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F</p></td=
+>
+                                                                    <td wid=
+th=3D"30%" style=3D"border-collapse: collapse;"><p class=3D"text" style=3D"=
+margin: 0 0 0 0; font-family: 'Century Gothic', CenturyGothic, AppleGothic,=
+ Arial, Helvetica, sans-serif; font-size: 12px; line-height: 15px; mso-line=
+-height-rule: exactly; color: black;"></p></td>
+                                                                </tr>
+                                                            </table></td>
+                                                    </tr>
+                                                </table>
+                                                                           =
+                 </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=3D"3" height=3D"20"=
+ class=3D"spacer-cell spacer-solid-gray-bottom" style=3D"border-collapse: c=
+ollapse; font-size: 1px; line-height: 1px; border-bottom: solid 1px #d9d9d9=
+;"></td>
+                                        </tr>
+                                    </table></td>
+                                <td width=3D"28" class=3D"spacer-cell" styl=
+e=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <tr>
+                    <td height=3D"20" class=3D"spacer-cell" style=3D"border=
+-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                </tr>
+                <!-- /Datos cliente -->
+           =20
+                <!-- Datos proveedor -->
+                <tr>
+                    <td style=3D"border-collapse: collapse;"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                            <tr>
+                                <td width=3D"28" class=3D"spacer-cell" styl=
+e=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                                <td style=3D"border-collapse: collapse;"><t=
+able width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                                        <tr>
+                                            <td width=3D"50%" valign=3D"top=
+" style=3D"border-collapse: collapse;"><table width=3D"100%" cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0">
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text font-weight-bold" style=3D"margin: 0=
+ 0 0 0; font-family: 'Century Gothic', CenturyGothic, AppleGothic, Arial, H=
+elvetica, sans-serif; font-size: 12px; line-height: 15px; mso-line-height-r=
+ule: exactly; color: black; font-weight: bold;">=D0=9F=D0=BE=D1=81=D1=82=D0=
+=B0=D0=B2=D1=89=D0=B8=D0=BA</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text" style=3D"margin: 0 0 0 0; font-fami=
+ly: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans-se=
+rif; font-size: 12px; line-height: 15px; mso-line-height-rule: exactly; col=
+or: black;">"PRIMEX-DAILY" LLC</p></td>
+                                                    </tr>
+                                                </table></td>
+                                            <td width=3D"50%" valign=3D"top=
+" style=3D"border-collapse: collapse;"><table width=3D"100%" cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0">
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text font-weight-bold" style=3D"margin: 0=
+ 0 0 0; font-family: 'Century Gothic', CenturyGothic, AppleGothic, Arial, H=
+elvetica, sans-serif; font-size: 12px; line-height: 15px; mso-line-height-r=
+ule: exactly; color: black; font-weight: bold;">=D0=90=D0=B4=D1=80=D0=B5=D1=
+=81 =D0=BF=D0=BE=D1=81=D1=82=D0=B0=D0=B2=D1=89=D0=B8=D0=BA=D0=B0</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text" style=3D"margin: 0 0 0 0; font-fami=
+ly: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans-se=
+rif; font-size: 12px; line-height: 15px; mso-line-height-rule: exactly; col=
+or: black;"> 4-YA MAGISTRALNAYA UL., 7 -  -  -  - Postal Code:123007 - MOSC=
+OW (=D0=A0=D0=9E=D0=A1=D0=A1=D0=98=D0=AF)</p></td>
+                                                    </tr>
+                                                </table></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan=3D"3" height=3D"20"=
+ class=3D"spacer-cell spacer-solid-gray-bottom" style=3D"border-collapse: c=
+ollapse; font-size: 1px; line-height: 1px; border-bottom: solid 1px #d9d9d9=
+;"></td>
+                                        </tr>
+                                    </table></td>
+                                <td width=3D"28" class=3D"spacer-cell" styl=
+e=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <tr>
+                    <td height=3D"20" class=3D"spacer-cell" style=3D"border=
+-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                </tr>
+                <!-- /Datos proveedor -->
+           =20
+                <!-- Comentarios y acciones -->
+                <tr>
+                    <td style=3D"border-collapse: collapse;"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                            <tr>
+                                <td width=3D"28" class=3D"spacer-cell" styl=
+e=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                                <td style=3D"border-collapse: collapse;"><t=
+able width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                                        <tr>
+                                            <td width=3D"50%" valign=3D"top=
+" style=3D"border-collapse: collapse;"><table width=3D"100%" cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0">
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text font-weight-bold" style=3D"margin: 0=
+ 0 0 0; font-family: 'Century Gothic', CenturyGothic, AppleGothic, Arial, H=
+elvetica, sans-serif; font-size: 12px; line-height: 15px; mso-line-height-r=
+ule: exactly; color: black; font-weight: bold;">=D0=9E=D0=B1=D1=89=D0=B8=D0=
+=B5 =D0=B7=D0=B0=D0=BC=D0=B5=D1=87=D0=B0=D0=BD=D0=B8=D1=8F =D0=BA =D0=B7=D0=
+=B0=D0=BA=D0=B0=D0=B7=D1=83</p></td>
+                                                    </tr>
+                                                                           =
+                         </table></td>
+                                            <td width=3D"50%" valign=3D"top=
+" style=3D"border-collapse: collapse;"><table width=3D"100%" cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0">
+                                                    <tr>
+                                                        <td valign=3D"botto=
+m" width=3D"10" class=3D"spacer-cell" style=3D"border-collapse: collapse; f=
+ont-size: 1px; line-height: 1px;"></td>
+                                                        <td valign=3D"botto=
+m" class=3D"spacer-cell" style=3D"border-collapse: collapse; font-size: 1px=
+; line-height: 1px;"></td>
+                                                                           =
+                                                                           =
+                                                                           =
+                                                               <td valign=
+=3D"bottom" width=3D"130" style=3D"border-collapse: collapse;">
+                                                                <a href=3D"=
+https://extranet-na.inditex.com/FINCAPPWEB-CAPortal/public/documentos/pedid=
+o.htm#/descargar/BfxZRHJLvc5V6rgclnLRJA58%2FIfohUxVaIjWy8NkMmxr7bEeRL9Pcg%3=
+D%3D%0D%0A" target=3D"_blank" class=3D"btn" style=3D"display: block; font-f=
+amily: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans=
+-serif; line-height: 15px; text-transform: uppercase; color: #ffffff; text-=
+align: center; font-size: 12px; text-decoration: none; background: #009999;=
+ border-top: solid 5px #009999; border-right: solid 10px #009999; border-bo=
+ttom: solid 3px #009999; border-left: solid 10px #009999;">=D0=9F=D1=80=D0=
+=BE=D1=81=D0=BC=D0=BE=D1=82=D1=80=D0=B5=D1=82=D1=8C =D0=B7=D0=B0=D0=BA=D0=
+=B0=D0=B7</a>
+                                                            </td>
+                                                        =09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09                                                   =
+     <td valign=3D"bottom" width=3D"10" class=3D"spacer-cell" style=3D"bord=
+er-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                                                    </tr>
+                                                </table></td>
+                                        </tr>
+                                    </table></td>
+                                <td width=3D"28" class=3D"spacer-cell" styl=
+e=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <tr>
+                    <td height=3D"40" class=3D"spacer-cell" style=3D"border=
+-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                </tr>
+                <!-- /Comentarios y acciones -->
+           =20
+                                <!-- Detalle tabla -->
+                <tr>
+                    <td style=3D"border-collapse: collapse;"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                            <tr>
+                                <td width=3D"2" class=3D"spacer-cell" style=
+=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                                <td style=3D"border-collapse: collapse;"><t=
+able width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                                        <tr>
+                                            <td style=3D"border-collapse: c=
+ollapse;"><table width=3D"100%" cellpadding=3D"7" cellspacing=3D"0" border=
+=3D"0" class=3D"detail-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <td width=3D"1"=
+ class=3D"spacer-cell" style=3D"border-collapse: collapse; font-size: 1px; =
+line-height: 1px; text-align: center; border-top: solid 1px #d9d9d9; border=
+-bottom: solid 1px #d9d9d9; border-left: solid 1px #d9d9d9;"><span style=3D=
+"color: black; font-family: 'Century Gothic', CenturyGothic, AppleGothic, A=
+rial, Helvetica, sans-serif; font-size: 12px; line-height: 15px; mso-line-h=
+eight-rule: exactly; font-weight: bold;">&nbsp;</span></td>
+                                                            <td style=3D"bo=
+rder-collapse: collapse; text-align: center; border-top: solid 1px #d9d9d9;=
+ border-bottom: solid 1px #d9d9d9;"><span style=3D"color: black; font-famil=
+y: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans-ser=
+if; font-size: 12px; line-height: 15px; mso-line-height-rule: exactly; font=
+-weight: bold;">=D0=9D=D0=BE=D0=BC=D0=B5=D1=80 =D0=B0=D1=80=D1=82=D0=B8=D0=
+=BA=D1=83=D0=BB=D0=B0</span></td>
+                                                            <td style=3D"bo=
+rder-collapse: collapse; text-align: center; border-top: solid 1px #d9d9d9;=
+ border-bottom: solid 1px #d9d9d9;"><span style=3D"color: black; font-famil=
+y: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans-ser=
+if; font-size: 12px; line-height: 15px; mso-line-height-rule: exactly; font=
+-weight: bold;">=D0=A2=D0=B8=D0=BF =D0=B5=D0=B4=D0=B8=D0=BD=D0=B8=D1=86=D1=
+=8B</span></td>
+                                                            <td style=3D"bo=
+rder-collapse: collapse; text-align: center; border-top: solid 1px #d9d9d9;=
+ border-bottom: solid 1px #d9d9d9;"><span style=3D"color: black; font-famil=
+y: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans-ser=
+if; font-size: 12px; line-height: 15px; mso-line-height-rule: exactly; font=
+-weight: bold;">=D0=9D=D0=B0=D0=B8=D0=BC=D0=B5=D0=BD=D0=BE=D0=B2=D0=B0=D0=
+=BD=D0=B8=D0=B5</span></td>
+                                                            <td style=3D"bo=
+rder-collapse: collapse; text-align: center; border-top: solid 1px #d9d9d9;=
+ border-bottom: solid 1px #d9d9d9;"><span style=3D"color: black; font-famil=
+y: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans-ser=
+if; font-size: 12px; line-height: 15px; mso-line-height-rule: exactly; font=
+-weight: bold;">=D0=9F=D0=BE=D0=B4=D1=81=D0=B5=D0=BC=D0=B5=D0=B9=D1=81=D1=
+=82=D0=B2=D0=BE</span></td>
+                                                            <td style=3D"bo=
+rder-collapse: collapse; text-align: center; border-top: solid 1px #d9d9d9;=
+ border-bottom: solid 1px #d9d9d9;"><span style=3D"color: black; font-famil=
+y: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans-ser=
+if; font-size: 12px; line-height: 15px; mso-line-height-rule: exactly; font=
+-weight: bold;">=D0=9A=D0=BE=D0=BB-=D0=B2=D0=BE</span></td>
+                                                                           =
+                                             <td width=3D"1" class=3D"space=
+r-cell" style=3D"border-collapse: collapse; font-size: 1px; line-height: 1p=
+x; text-align: center; border-top: solid 1px #d9d9d9; border-bottom: solid =
+1px #d9d9d9; border-right: solid 1px #d9d9d9;"><span style=3D"color: black;=
+ font-family: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetic=
+a, sans-serif; font-size: 12px; line-height: 15px; mso-line-height-rule: ex=
+actly; font-weight: bold;">&nbsp;</span></td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td valing=3D"t=
+op" width=3D"1" class=3D"spacer-cell" style=3D"border-collapse: collapse; f=
+ont-size: 11px; line-height: 15px; font-family: 'Century Gothic', CenturyGo=
+thic, AppleGothic, Arial, Helvetica, sans-serif; mso-line-height-rule: exac=
+tly; color: black; text-align: center;"><span style=3D"font-family: 'Centur=
+y Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans-serif; font-s=
+ize: 11px; line-height: 15px; color: black;">&nbsp;</span></td>
+                                                            <td valing=3D"t=
+op" style=3D"border-collapse: collapse; font-family: 'Century Gothic', Cent=
+uryGothic, AppleGothic, Arial, Helvetica, sans-serif; font-size: 11px; line=
+-height: 15px; mso-line-height-rule: exactly; color: black; text-align: cen=
+ter;"><span style=3D"font-family: 'Century Gothic', CenturyGothic, AppleGot=
+hic, Arial, Helvetica, sans-serif; font-size: 11px; line-height: 15px; colo=
+r: black;">145000125</span></td>
+                                                            <td valing=3D"t=
+op" style=3D"border-collapse: collapse; font-family: 'Century Gothic', Cent=
+uryGothic, AppleGothic, Arial, Helvetica, sans-serif; font-size: 11px; line=
+-height: 15px; mso-line-height-rule: exactly; color: black; text-align: cen=
+ter;"><span style=3D"font-family: 'Century Gothic', CenturyGothic, AppleGot=
+hic, Arial, Helvetica, sans-serif; font-size: 11px; line-height: 15px; colo=
+r: black;">Ud.</span></td>
+                                                            <td valing=3D"t=
+op" style=3D"border-collapse: collapse; font-family: 'Century Gothic', Cent=
+uryGothic, AppleGothic, Arial, Helvetica, sans-serif; font-size: 11px; line=
+-height: 15px; mso-line-height-rule: exactly; color: black; text-align: cen=
+ter;"><span style=3D"font-family: 'Century Gothic', CenturyGothic, AppleGot=
+hic, Arial, Helvetica, sans-serif; font-size: 11px; line-height: 15px; colo=
+r: black;">OTHER INSTALLATIONS REPAIR</span></td>
+                                                            <td valing=3D"t=
+op" style=3D"border-collapse: collapse; font-family: 'Century Gothic', Cent=
+uryGothic, AppleGothic, Arial, Helvetica, sans-serif; font-size: 11px; line=
+-height: 15px; mso-line-height-rule: exactly; color: black; text-align: cen=
+ter;"><span style=3D"font-family: 'Century Gothic', CenturyGothic, AppleGot=
+hic, Arial, Helvetica, sans-serif; font-size: 11px; line-height: 15px; colo=
+r: black;">=D0=94=D1=80=D1=83=D0=B3=D0=BE=D0=B5</span></td>
+                                                            <td valing=3D"t=
+op" style=3D"border-collapse: collapse; font-family: 'Century Gothic', Cent=
+uryGothic, AppleGothic, Arial, Helvetica, sans-serif; font-size: 11px; line=
+-height: 15px; mso-line-height-rule: exactly; color: black; text-align: cen=
+ter;"><span style=3D"font-family: 'Century Gothic', CenturyGothic, AppleGot=
+hic, Arial, Helvetica, sans-serif; font-size: 11px; line-height: 15px; colo=
+r: black;">1.00</span></td>
+                                                                           =
+                                             <td valing=3D"top" width=3D"1"=
+ class=3D"spacer-cell" style=3D"border-collapse: collapse; font-size: 11px;=
+ line-height: 15px; font-family: 'Century Gothic', CenturyGothic, AppleGoth=
+ic, Arial, Helvetica, sans-serif; mso-line-height-rule: exactly; color: bla=
+ck; text-align: center;"><span style=3D"font-family: 'Century Gothic', Cent=
+uryGothic, AppleGothic, Arial, Helvetica, sans-serif; font-size: 11px; line=
+-height: 15px; color: black;">&nbsp;</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table></td>
+                                        </tr>
+                                    </table></td>
+                                <td width=3D"2" class=3D"spacer-cell" style=
+=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <tr>
+                    <td height=3D"20" class=3D"spacer-cell" style=3D"border=
+-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                </tr>
+                <!-- /Detalle tabla -->
+                               =20
+                <!-- Observaciones -->
+                                <tr>
+                    <td style=3D"border-collapse: collapse;"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                            <tr>
+                                <td width=3D"28" class=3D"spacer-cell" styl=
+e=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                                <td style=3D"border-collapse: collapse;"><t=
+able width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                                        <tr>
+                                            <td valign=3D"top" width=3D"150=
+" style=3D"border-collapse: collapse;"><p class=3D"text" style=3D"margin: 0=
+ 0 0 0; font-family: 'Century Gothic', CenturyGothic, AppleGothic, Arial, H=
+elvetica, sans-serif; font-size: 12px; line-height: 15px; mso-line-height-r=
+ule: exactly; color: black;">=D0=9F=D1=80=D0=B8=D0=BC=D0=B5=D1=87=D0=B0=D0=
+=BD=D0=B8=D1=8F</p></td>
+                                            <td style=3D"border-collapse: c=
+ollapse;">
+                                                                           =
+                 </td>
+                                            <td width=3D"100" class=3D"spac=
+er-cell" style=3D"border-collapse: collapse; font-size: 1px; line-height: 1=
+px;"></td>
+                                        </tr>
+                                    </table></td>
+                                <td width=3D"28" class=3D"spacer-cell" styl=
+e=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <tr>
+                    <td height=3D"20" class=3D"spacer-cell" style=3D"border=
+-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                </tr>
+                   =20
+                               =20
+                    <tr>
+                        <td style=3D"border-collapse: collapse;"><table wid=
+th=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                                <tr>
+                                    <td width=3D"28" class=3D"spacer-cell" =
+style=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td=
+>
+                                    <td height=3D"7" class=3D"spacer-cell s=
+pacer-solid-gray-bottom" style=3D"border-collapse: collapse; font-size: 1px=
+; line-height: 1px; border-bottom: solid 1px #d9d9d9;"></td>
+                                    <td width=3D"28" class=3D"spacer-cell" =
+style=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td=
+>
+                                </tr>
+                            </table></td>
+                    </tr>
+                    <tr>
+                        <td height=3D"20" class=3D"spacer-cell" style=3D"bo=
+rder-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                    </tr>
+           =20
+                                <!-- /Observaciones -->
+           =20
+                <!-- Datos facturaci=C3=B3n -->
+                <tr>
+                    <td style=3D"border-collapse: collapse;"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                            <tr>
+                                <td width=3D"28" class=3D"spacer-cell" styl=
+e=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                                <td style=3D"border-collapse: collapse;"><t=
+able width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                                        <tr>
+                                            <td style=3D"border-collapse: c=
+ollapse;"><p class=3D"text font-size-sm" style=3D"margin: 0 0 0 0; font-fam=
+ily: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans-s=
+erif; font-size: 11px; line-height: 14px; mso-line-height-rule: exactly; co=
+lor: black;">=D0=98=D0=BD=D1=84=D0=BE=D1=80=D0=BC=D0=B0=D1=86=D0=B8=D1=8F =
+=D0=B4=D0=BB=D1=8F =D0=B2=D1=8B=D1=81=D1=82=D0=B0=D0=B2=D0=BB=D0=B5=D0=BD=
+=D0=B8=D1=8F =D1=81=D1=87=D0=B5=D1=82=D0=B0 =D0=BD=D0=B0 =D0=BE=D0=BF=D0=BB=
+=D0=B0=D1=82=D1=83</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td height=3D"7" class=3D"space=
+r-cell" style=3D"border-collapse: collapse; font-size: 1px; line-height: 1p=
+x;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style=3D"border-collapse: c=
+ollapse;"><p class=3D"text font-size-sm" style=3D"margin: 0 0 0 0; font-fam=
+ily: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans-s=
+erif; font-size: 11px; line-height: 14px; mso-line-height-rule: exactly; co=
+lor: black;"><!--Invoice to Tax Code: 7717555256, LLC MASSIMO DUTTI ,  PRES=
+NENSKAYA NABEREZHNAYA 10, - Postal Code:123112 - MOSC=C3=9A (=D0=A0=D0=9E=
+=D0=A1=D0=A1=D0=98=D0=AF).--> =D0=9D=D0=BE=D0=BC=D0=B5=D1=80 =D0=97=D0=B0=
+=D0=BA=D0=B0=D0=B7=D0=B0 =D0=BD=D0=B0 =D0=BF=D0=BE=D0=BA=D1=83=D0=BF=D0=BA=
+=D1=83 =D0=B2 =D0=BE=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=
+=D0=BE=D0=BC =D0=BF=D0=BE=D1=80=D1=8F=D0=B4=D0=BA=D0=B5 =D1=83=D0=BA=D0=B0=
+=D0=B7=D1=8B=D0=B2=D0=B0=D0=B5=D1=82=D1=81=D1=8F =D0=B2 =D1=81=D1=87=D0=B5=
+=D1=82=D0=B5 =D0=BD=D0=B0 =D0=BE=D0=BF=D0=BB=D0=B0=D1=82=D1=83.
+=09=09=09=09=09=09=09=09=09=09=09                                          =
+  </p></td>
+                                        </tr>
+                                        <tr>
+                                            <td height=3D"20" class=3D"spac=
+er-cell spacer-dotted-black-bottom" style=3D"border-collapse: collapse; fon=
+t-size: 1px; line-height: 1px; border-bottom: dotted 1px #000000;"></td>
+                                        </tr>
+                                    </table></td>
+                                <td width=3D"28" class=3D"spacer-cell" styl=
+e=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <tr>
+                    <td height=3D"20" class=3D"spacer-cell" style=3D"border=
+-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                </tr>
+                <!-- /Datos facturaci=C3=B3n -->
+           =20
+                <!-- Documentos adjuntos -->
+                <tr>
+                    <td style=3D"border-collapse: collapse;"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                            <tr>
+                                <td width=3D"28" class=3D"spacer-cell" styl=
+e=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                                <td style=3D"border-collapse: collapse;"><t=
+able width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                                        <tr>
+                                            <td style=3D"border-collapse: c=
+ollapse;"><p class=3D"text font-size-sm" style=3D"margin: 0 0 0 0; font-fam=
+ily: 'Century Gothic', CenturyGothic, AppleGothic, Arial, Helvetica, sans-s=
+erif; font-size: 11px; line-height: 14px; mso-line-height-rule: exactly; co=
+lor: black;">=D0=9F=D1=80=D0=B8=D0=BB=D0=BE=D0=B6=D0=B5=D0=BD=D0=BD=D1=8B=
+=D0=B5 =D0=B4=D0=BE=D0=BA=D1=83=D0=BC=D0=B5=D0=BD=D1=82=D1=8B =D1=8F=D0=B2=
+=D0=BB=D1=8F=D1=8E=D1=82=D1=81=D1=8F =D0=BD=D0=B5=D0=BE=D1=82=D1=8A=D0=B5=
+=D0=BC=D0=BB=D0=B5=D0=BC=D0=BE=D0=B9 =D1=87=D0=B0=D1=81=D1=82=D1=8C=D1=8E =
+=D0=BD=D0=B0=D1=81=D1=82=D0=BE=D1=8F=D1=89=D0=B5=D0=B3=D0=BE =D0=B7=D0=B0=
+=D0=BA=D0=B0=D0=B7=D0=B0 =D0=BD=D0=B0 =D0=BF=D0=BE=D0=BA=D1=83=D0=BF=D0=BA=
+=D1=83.</p></td>
+                                        </tr>
+                                                                           =
+ </table></td>
+                                <td width=3D"28" class=3D"spacer-cell" styl=
+e=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <tr>
+                    <td height=3D"20" class=3D"spacer-cell" style=3D"border=
+-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                </tr>
+                <!-- /Documentos adjuntos -->
+           =20
+                <!-- Logo SFI COMPRAS -->
+                <tr>
+                    <td style=3D"border-collapse: collapse;"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                            <tr>
+                                <td style=3D"border-collapse: collapse;"><t=
+able width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=
+=3D"highlight-bg-color" style=3D"background-color: #009999;">
+                                        <tr>
+                                            <td height=3D"24" class=3D"spac=
+er-cell" style=3D"border-collapse: collapse; font-size: 1px; line-height: 1=
+px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=3D"text-align-center"=
+ style=3D"border-collapse: collapse; text-align: center;"><img src=3D"https=
+://extranet-na.inditex.com/FINCAPPWEB-CAPortal/api/public/documentos/descar=
+garNas.htm?dir=3DimagenesCorreo/logos&file=3Dlogo-sfi.png" alt=3D"" class=
+=3D"img_fix"></td>
+                                        </tr>
+                                        <tr>
+                                            <td height=3D"10" class=3D"spac=
+er-cell" style=3D"border-collapse: collapse; font-size: 1px; line-height: 1=
+px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=3D"text-align-center"=
+ style=3D"border-collapse: collapse; text-align: center;"><span class=3D"sf=
+i-logo-text" style=3D"font-family: 'Century Gothic', CenturyGothic, AppleGo=
+thic, Arial, Helvetica, sans-serif; font-size: 11px; line-height: 14px; fon=
+t-weight: bold; letter-spacing: 3.5px; color: #ffffff;">SFI PURCHASES</span=
+></td>
+                                        </tr>
+                                        <tr>
+                                            <td height=3D"24" class=3D"spac=
+er-cell" style=3D"border-collapse: collapse; font-size: 1px; line-height: 1=
+px;"></td>
+                                        </tr>
+                                    </table></td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <!-- /Logo SFI COMPRAS -->
+           =20
+                <!-- Contacto -->
+                <tr>
+                    <td style=3D"border-collapse: collapse;"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"body-bg=
+-color" style=3D"background-color: #d9d9d9;">
+                            <tr>
+                                <td height=3D"10" class=3D"spacer-cell" sty=
+le=3D"border-collapse: collapse; font-size: 1px; line-height: 1px;"></td>
+                            </tr>
+                            <tr>
+                                <td style=3D"border-collapse: collapse;"><t=
+able cellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"body-bg">
+                                        <tr>
+                                            <td width=3D"28" class=3D"space=
+r-cell" style=3D"border-collapse: collapse; font-size: 1px; line-height: 1p=
+x;"></td>
+                                            <td style=3D"border-collapse: c=
+ollapse;"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text font-size-sm highlight-color" style=
+=3D"margin: 0 0 0 0; font-family: 'Century Gothic', CenturyGothic, AppleGot=
+hic, Arial, Helvetica, sans-serif; font-size: 11px; line-height: 14px; mso-=
+line-height-rule: exactly; color: #009999;">=D0=92 =D1=81=D0=BB=D1=83=D1=87=
+=D0=B0=D0=B5 =D0=B2=D0=BE=D0=B7=D0=BD=D0=B8=D0=BA=D0=BD=D0=BE=D0=B2=D0=B5=
+=D0=BD=D0=B8=D1=8F =D0=B2=D0=BE=D0=BF=D1=80=D0=BE=D1=81=D0=BE=D0=B2 =D0=BE=
+=D1=82=D0=BD=D0=BE=D1=81=D0=B8=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=D0=BE =D0=98=
+=D0=A2-=D0=BF=D1=80=D0=B8=D0=BB=D0=BE=D0=B6=D0=B5=D0=BD=D0=B8=D1=8F =D0=BF=
+=D1=80=D0=BE=D1=81=D0=B8=D0=BC =D0=BE=D0=B1=D1=80=D0=B0=D1=89=D0=B0=D1=82=
+=D1=8C=D1=81=D1=8F =D0=B2 =D1=81=D0=BB=D1=83=D0=B6=D0=B1=D1=83 =D0=BF=D0=BE=
+=D0=B4=D0=B4=D0=B5=D1=80=D0=B6=D0=BA=D0=B8 =D0=BF=D0=BE =D1=8D=D0=BB=D0=B5=
+=D0=BA=D1=82=D1=80=D0=BE=D0=BD=D0=BD=D0=BE=D0=B9 =D0=BF=D0=BE=D1=87=D1=82=
+=D0=B5: <a class=3D"highlight-color text-decoration-underline" href=3D"mail=
+to:extranetSupport@inditex.com" target=3D"_blank" style=3D"text-decoration:=
+ underline; color: #009999;">extranetSupport@inditex.com</a> =D0=B8=D0=BB=
+=D0=B8 =D0=BF=D0=BE =D1=82=D0=B5=D0=BB=D0=B5=D1=84=D0=BE=D0=BD=D1=83: <a cl=
+ass=3D"highlight-color" href=3D"tel:+34 981186100" style=3D"color: #009999;=
+">+34 981186100</a></p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height=3D"20" c=
+lass=3D"spacer-cell" style=3D"border-collapse: collapse; font-size: 1px; li=
+ne-height: 1px;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style=3D"border=
+-collapse: collapse;"><p class=3D"text font-size-sm highlight-color" style=
+=3D"margin: 0 0 0 0; font-family: 'Century Gothic', CenturyGothic, AppleGot=
+hic, Arial, Helvetica, sans-serif; font-size: 11px; line-height: 14px; mso-=
+line-height-rule: exactly; color: #009999;">=D0=92 =D1=81=D0=BB=D1=83=D1=87=
+=D0=B0=D0=B5 =D0=B2=D0=BE=D0=B7=D0=BD=D0=B8=D0=BA=D0=BD=D0=BE=D0=B2=D0=B5=
+=D0=BD=D0=B8=D1=8F =D0=B2=D0=BE=D0=BF=D1=80=D0=BE=D1=81=D0=BE=D0=B2 =D0=BE=
+=D1=82=D0=BD=D0=BE=D1=81=D0=B8=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=D0=BE =D1=81=
+=D0=BE=D0=B4=D0=B5=D1=80=D0=B6=D0=B0=D0=BD=D0=B8=D1=8F =D0=B7=D0=B0=D0=BA=
+=D0=B0=D0=B7=D0=B0 =D0=BF=D1=80=D0=BE=D1=81=D0=B8=D0=BC =D0=BE=D0=B1=D1=80=
+=D0=B0=D1=89=D0=B0=D1=82=D1=8C=D1=81=D1=8F =D0=BA =D0=BC=D0=B5=D0=BD=D0=B5=
+=D0=B4=D0=B6=D0=B5=D1=80=D1=83 =D0=BF=D0=BE =D0=B7=D0=B0=D0=BA=D1=83=D0=BF=
+=D0=BA=D0=B0=D0=BC.</p></td>
+                                                    </tr>
+                                                </table></td>
+                                            <td width=3D"28" class=3D"space=
+r-cell" style=3D"border-collapse: collapse; font-size: 1px; line-height: 1p=
+x;"></td>
+                                        </tr>
+                                    </table></td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <!-- /Contacto -->
+           =20
+            </table></td>
+    </tr>
+</table>
+=09</body>
+</html>
