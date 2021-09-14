@@ -16,12 +16,11 @@ class ExcelStorage(Storage):
     def __init__(self, config: Config):
         self.config = config
 
+    def _get_cwd(self, order: Order) -> Path:
+        return Path(self.config.storage["ROOT"], str(order.date.year))
+
     def _get_wb_path(self, order: Order) -> Path:
-        path = Path(
-            self.config.storage["ROOT"],
-            str(order.date.year),
-            f"{order.date.year}_учет_заявок.xlsx",
-        )
+        path = self._get_cwd(order) / f"{order.date.year}_учет_заявок.xlsx"
         if not path.is_file():
             path.parent.mkdir(exist_ok=True, parents=True)
 
@@ -68,3 +67,9 @@ class ExcelStorage(Storage):
         ws.append(order_as_row)
         logger.info(f"order {order.order_id} added!")
         wb.save(self._get_wb_path(order))
+
+    def add_attachment(self, order: Order, attachment: Path):
+        path = self._get_cwd(order)
+        cwd = Path(path, str(order.order_id))
+        cwd.mkdir(parents=True, exist_ok=True)
+        shutil.copy(attachment, cwd)

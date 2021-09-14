@@ -39,6 +39,10 @@ class Storage(ABC):
     def add_order(self, order: Order):  # pragma: no cover
         ...
 
+    @abstractmethod
+    def add_attachment(self, order: Order, attachment: Path):
+        ...
+
 
 class Builder(ABC):
     @abstractmethod
