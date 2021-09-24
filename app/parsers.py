@@ -12,11 +12,8 @@ from app.core import Order, OrderStatus, Parser
 
 class EmailParser(Parser):
     def parse(self, path: Path) -> Order:
-        with open(path, "rb") as fhdl:
-            raw_email = fhdl.read()
-
         ep = eml_parser.EmlParser(include_raw_body=True)
-        parsed_eml = ep.decode_email_bytes(raw_email)
+        parsed_eml = ep.decode_email_bytes(path.read_bytes())
 
         content = parsed_eml["body"][0]["content"]
 
@@ -39,20 +36,41 @@ class EmailParser(Parser):
 
     def _extract_order_id(self, html: str) -> int:
         xpath = self._build_xpath("Заказ на покупку")
-        el: Element = self._get_by_xpath(html, xpath)[0]
+
+        try:
+            el: Element = self._get_by_xpath(html, xpath)[0]
+        except IndexError:
+            xpath = self._build_xpath("Purchase order")
+            el: Element = self._get_by_xpath(html, xpath)[0]
+
         return int(el.text)
 
     def _extract_order_date(self, html: str) -> datetime:
         xpath = self._build_xpath("Дата")
-        el: Element = self._get_by_xpath(html, xpath)[0]
+        try:
+            el: Element = self._get_by_xpath(html, xpath)[0]
+        except IndexError:
+            xpath = self._build_xpath("Date")
+            el: Element = self._get_by_xpath(html, xpath)[0]
+
         return datetime.strptime(el.text, "%d/%m/%Y")
 
     def _extract_description(self, html: str) -> str:
         xpath = self._build_xpath("Описание")
-        el: Element = self._get_by_xpath(html, xpath)[0]
+        try:
+            el: Element = self._get_by_xpath(html, xpath)[0]
+        except IndexError:
+            xpath = self._build_xpath("Description")
+            el: Element = self._get_by_xpath(html, xpath)[0]
+
         return el.text.strip().upper()
 
     def _extract_warehouse_id(self, html: str) -> int:
         xpath = self._build_xpath("Место назначения")
-        el: Element = self._get_by_xpath(html, xpath)[0]
+        try:
+            el: Element = self._get_by_xpath(html, xpath)[0]
+        except IndexError:
+            xpath = self._build_xpath("Destination")
+            el: Element = self._get_by_xpath(html, xpath)[0]
+
         return int(el.text.split("/")[0].strip())

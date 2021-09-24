@@ -1,3 +1,5 @@
+#!python
+
 import fire
 
 from app.main import bulk, run  # noqa

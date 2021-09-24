@@ -142,4 +142,5 @@ cython_debug/
 # Project
 storage/
 emails/
+emails-o
 test.py
