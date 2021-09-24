@@ -6,10 +6,10 @@ from app.parsers import EmailParser
 
 
 class TestEmailParser:
-    extract_datafile = Path("../data/content.html")
+    extract_datafile = Path("data/content.html")
 
     def test_parse_order(self, root):
-        order = EmailParser().parse(Path("../data/email.eml"))
+        order = EmailParser().parse(Path("data/email.eml"))
 
         expected_order = Order(
             order_id=12747295,

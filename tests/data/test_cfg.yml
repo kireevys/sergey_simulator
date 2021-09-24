@@ -1,5 +1,5 @@
 TEMPLATE:
-  ROOT: ../../templates
+  ROOT: ../templates
   TEMPLATES:
     - orders: orders_book_template.xlsx
 

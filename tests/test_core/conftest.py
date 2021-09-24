@@ -5,7 +5,7 @@ import pytest
 
 from app.config import Config
 
-config = Config(Path("../data/test_cfg.yml"))
+config = Config(Path("data/test_cfg.yml"))
 
 
 @pytest.fixture(autouse=True)

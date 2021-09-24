@@ -22,7 +22,7 @@ def test_process(root):
     )
     path = Path(root, "2021/2021_учет_заявок.xlsx")
 
-    process(Path("../data/email.eml"), ExcelStorage(config))
+    process(Path("data/email.eml"), ExcelStorage(config))
 
     wb = load_workbook(path, read_only=True)
     ws: Worksheet = wb.get_sheet_by_name("9")
