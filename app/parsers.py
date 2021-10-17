@@ -7,10 +7,10 @@ import eml_parser
 from lxml import etree
 from lxml.etree import Element
 
-from app.core import Order, OrderStatus, Parser
+from app.core import ClosureAct, ClosureActParser, Order, OrderParser, OrderStatus
 
 
-class EmailParser(Parser):
+class EmailOrderParser(OrderParser):
     def parse(self, path: Path) -> Order:
         ep = eml_parser.EmlParser(include_raw_body=True)
         parsed_eml = ep.decode_email_bytes(path.read_bytes())
@@ -74,3 +74,30 @@ class EmailParser(Parser):
             el: Element = self._get_by_xpath(html, xpath)[0]
 
         return int(el.text.split("/")[0].strip())
+
+
+class EmailCAPParser(ClosureActParser):
+    def parse(self, path: Path) -> ClosureAct:
+        ep = eml_parser.EmlParser(include_raw_body=True)
+        parsed_eml = ep.decode_email_bytes(path.read_bytes())
+
+        content = parsed_eml["body"][0]["content"]
+
+        date = datetime.combine(
+            parsed_eml.get("header").get("date").date(),
+            datetime.min.time(),
+        )
+        return ClosureAct(
+            order_id=self._get_order_id(content),
+            date=date,
+        )
+
+    def _get_by_xpath(self, html: str, xpath: str) -> list:
+        htmlparser = etree.HTMLParser()
+        tree = etree.parse(StringIO(html), htmlparser)
+        els: List[Element] = tree.xpath(xpath)
+        return els
+
+    def _get_order_id(self, html: str) -> int:
+        xpath = '//span[contains(text(), "purchase order")]//following-sibling::span'
+        return int(self._get_by_xpath(html, xpath)[0].text.strip())

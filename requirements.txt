@@ -5,5 +5,5 @@ pydantic==1.8.2
 PyYAML==5.4.1
 fire==0.4.0
 lxml==4.6.3
-
+pytest-mock==3.6.1
 eml_parser==1.14.8
