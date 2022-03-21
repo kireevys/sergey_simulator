@@ -1,0 +1,181 @@
+X-GM-THRID: 1710804974595791318
+X-Gmail-Labels: =?UTF-8?B?0JLRhdC+0LTRj9GJ0LjQtSzQktCw0LbQvQ==?=
+ =?UTF-8?B?0YvQtSzQmtCw0YLQtdCz0L7RgNC40Y8gIg==?=
+ =?UTF-8?B?ItCe0L/QvtCy0LXRidC10L3QuNGPIiI=?=
+ =?UTF-8?B?LNCd0LXQv9GA0L7Rh9C40YLQsNC90L3Ri9C1?=
+Delivered-To: ktoinditex2020@gmail.com
+Received: by 2002:ae9:c104:0:0:0:0:0 with SMTP id z4csp3624950qki;
+        Mon, 13 Sep 2021 09:32:44 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxyUTHinN/SckBK6j8/bbuD/DuhPEITyfC2HkyGkQtsZGdKa7yMFLULCupzvNf/+68GObmY
+X-Received: by 2002:a05:6512:104e:: with SMTP id c14mr9446334lfb.277.1631550764781;
+        Mon, 13 Sep 2021 09:32:44 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1631550764; cv=none;
+        d=google.com; s=arc-20160816;
+        b=GIjWo9gxegxsd6EpXfhDU4GUMPCU9PaAr4ZaEam2FVXTXjo2rgog+gLDsvmmcHex74
+         1yacZa3fVu3YxCmWALaOghzFZNpFR6n+AFaZC+6Sclif3RY2nuzoS7RVa3WEo7xRlEcv
+         mBTzTpuMVncPeXmAQHZUGNHX/XIWJFeHr9zSMKuVv9gbTWif6R5HYas7/7ZQ85xSr2dO
+         okVUruuCs8RW0uT5z3r/SN1vdd04p5FH0Ku2scyWiwAor7UMuP7yDDDmqB4bDoXeHKq2
+         uOpnRGXiILBhNapTotDxXPODkXTrtfvkEBTOMsDbYuVMfi95brM8MILYRQbrcZM16l5y
+         +X6w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:subject:message-id:to:from
+         :date:dkim-signature;
+        bh=4kcbqgXXYH/gyUnRW4nF0WmYsaH9w/ABVvSmHZNq3/s=;
+        b=wPi+0SsYHOnrbGkgUrV4zTBjQ34yAM24MQ9YRNLonE3cZaKuz/9B6ssQEhAvq+Vv2A
+         txKSP0BJLMUuYbAGZGfJjgvJv3nhjHZt/BtQoWEJyD8P0Jopox2KLawY7iOkpFzjpFJZ
+         gwIeFFrjAd2MBJLArovux8Gdspx/bohlzYLd5iloIxBYDgC9sLWB1q+5HsmJYr/m01Hf
+         Cjv7VIE5EWV85/KPlAXt4vCwqzcCUkLPoNZ/jygJSdW4nmrs6MVUNc3UnC1KyqyM7MJh
+         xuEbTQmQOWhAMD7RVQYz5/8p5HvpGAWULGPzIyfpOQ3NSfh3Op7C0ebAkv3w29NYZlZA
+         SNVg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@inditex.com header.s=ItxDkimInditexCOM12022019 header.b="Aan3/TXS";
+       spf=pass (google.com: domain of noreply.sficompras@inditex.com designates 195.245.230.67 as permitted sender) smtp.mailfrom=noreply.sficompras@inditex.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=inditex.com
+Return-Path: <noreply.sficompras@inditex.com>
+Received: from mail1.bemta25.messagelabs.com (mail1.bemta25.messagelabs.com. [195.245.230.67])
+        by mx.google.com with ESMTPS id f5si9125455ljg.240.2021.09.13.09.32.44
+        for <ktoinditex2020@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 13 Sep 2021 09:32:44 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply.sficompras@inditex.com designates 195.245.230.67 as permitted sender) client-ip=195.245.230.67;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@inditex.com header.s=ItxDkimInditexCOM12022019 header.b="Aan3/TXS";
+       spf=pass (google.com: domain of noreply.sficompras@inditex.com designates 195.245.230.67 as permitted sender) smtp.mailfrom=noreply.sficompras@inditex.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=inditex.com
+Return-Path: <noreply.sficompras@inditex.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=inditex.com;
+	s=ItxDkimInditexCOM12022019; t=1631550741; i=@inditex.com;
+	bh=4kcbqgXXYH/gyUnRW4nF0WmYsaH9w/ABVvSmHZNq3/s=;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type:
+	 Content-Transfer-Encoding;
+	b=Aan3/TXSi75en7l5vduTJ5s6cBzPkhZXLiTt7LBrCsgvY9JNlSof59PL/8NynLDMX
+	 SB1XSlxAJsQR15GySiQdzKhuydCS+IBL5vKAAK3jn5PeHYX1cohlj/hCHzVYoZuyxh
+	 rkxogoNP8se0BFLny5WEvz8NGE823tBvRK1bri/dcdFvUcuq15nEzFz+TAJuJ2wkTo
+	 FJBl1qDJpNEDU+sORCH0cS1SQcaKJSz79SlRr5dcwXfTZOqyBky2PKNibBcBO6qbxP
+	 KLWgS9qj3IJBrlvb1PW77Q3xK2B64zdWvDkiTrg7pdHFJLeyRO8xp0z5WCbYs5PvBe
+	 YOFcR5qbsGlTA==
+Received: from [100.112.199.201] (using TLSv1.2 with cipher DHE-RSA-AES256-GCM-SHA384 (256 bits))
+	by server-3.bemta.az-b.eu-west-1.aws.symcld.net id BE/C1-25352-51D7F316; Mon, 13 Sep 2021 16:32:21 +0000
+X-Brightmail-Tracker: H4sIAAAAAAAAA+NgFjrPIsWRWlGSWpSXmKPExsVy2HehuK5IrX2
+  iwcoLwhYfuq4xOjB67Jx1lz2AMYo1My8pvyKBNWPzmalsBed5K/ruHmFqYDzN2cXIxSEksJVR
+  YmpbMyOEc5RRYtHDk8wQzlVGifszJrN0MXJysAioSmzbe5wRxGYTcJQ41D+NDcQWEZCT2LdkL
+  VicVyBG4vu6yawgzcIClxkljjyawQaREJQ4OfMJ2CBmAQ2JBXf2MULY2hLLFr5mBrGFgOw7/x
+  aC2RIC1hJT+5azwth//mxknMDINwvJqFlIRs1CMmoBI/MqRvOkosz0jJLcxMwcXUMDA11DQyN
+  dQ0sLXWMDvcQq3SS91FLd8tTiEl1DvcTyYr3iytzknBS9vNSSTYzAkEwpOCa3g7H3zQe9Q4yS
+  HExKoryd1faJQnxJ+SmVGYnFGfFFpTmpxYcYZTg4lCR4TSqAcoJFqempFWmZOcD4gElLcPAoi
+  fBalQCleYsLEnOLM9MhUqcY7Tk+rlqyiJnjO5j8ASabPgBJIZa8/LxUKXHepyAbBUDaMkrz4I
+  bC4vkSo6yUMC8jAwODEE9BalFuZgmq/CtGcQ5GJWHeFSBTeDLzSuB2vwI6iwnorK+nbEDOKkl
+  ESEk1MMV+rVt1PEXk6t/dh1Ob3fzYl3zZqfHm8PvpS+SXnzeQV52k5Fz60N39XOPpM2LP2kyN
+  q8Vct/95Hr7AULGn3DrLKP9gfc/JqSWaRuFZj1YIt+i5xfjM0GVY+ELTsOC97+XsSP7Uf9zP4
+  u8XqjdqJD8TldQ5fW8zY/fWwm8n3Tw0M//dFz/+U+Ph88c353EacJZbsWvsbGjnyObycvZcpv
+  BAb8ES4227JSYGc96YPy2WgSFX8cDc8KOHz3UbO/9ObprroLI44aV5YXHFmUlHRab5rZnqb9o
+  gbVZ/cG+UWd20acfU3Du1s1cmMN6bIGPb8d7540W3w56Wr4S9wtLuJLWrn53Ac/RXuCf/0u46
+  JZbijERDLeai4kQASIExYGIDAAA=
+X-Env-Sender: noreply.sficompras@inditex.com
+X-Msg-Ref: server-6.tower-288.messagelabs.com!1631550733!177246!15
+X-Originating-IP: [195.77.161.23]
+X-SYMC-ESS-Client-Auth: outbound-route-from=pass
+X-StarScan-Received:
+X-StarScan-Version: 9.81.4; banners=-,-,-
+X-VirusChecked: Checked
+Received: (qmail 22328 invoked from network); 13 Sep 2021 16:32:20 -0000
+Received: from 23.red-195-77-161.customer.static.ccgg.telefonica.net (HELO smtp.inditex.com) (195.77.161.23)
+  by server-6.tower-288.messagelabs.com with SMTP; 13 Sep 2021 16:32:20 -0000
+Received: from AXINEXDESP11.central.inditex.grp (10.110.10.23) by
+ smtp.inditex.com (172.24.25.27) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.23; Mon, 13 Sep 2021 18:32:12 +0200
+Received: from AXINEXCUSR05.central.inditex.grp (10.110.10.13) by
+ AXINEXDESP11.central.inditex.grp (10.110.10.23) with Microsoft SMTP Server
+ (TLS) id 15.0.1497.23; Mon, 13 Sep 2021 18:32:12 +0200
+Received: from axinwastgt9.central.inditex.grp (10.110.37.40) by
+ AXINEXCUSR05.central.inditex.grp (10.110.10.13) with Microsoft SMTP Server id
+ 15.0.1497.23 via Frontend Transport; Mon, 13 Sep 2021 18:32:11 +0200
+Date: Mon, 13 Sep 2021 18:32:12 +0200
+From: Compras Indirectas Inditex <noreply.sficompras@inditex.com>
+To: <ktoinditex2020@gmail.com>
+Message-ID: <1115243129.90961631550732037.JavaMail.wasadmin@axinwastgt9.central.inditex.grp>
+Subject: =?UTF-8?Q?Resoluci=C3=B3n_OTs_-_Tienda:_Bershka_13?=
+ =?UTF-8?Q?851_KAZ-MEGA_IKEA_-_Pedido:_12175150?=
+ =?UTF-8?Q?_/_WOs_resolution_-_Store:_Bershka_1?=
+ =?UTF-8?Q?3851_KAZ-MEGA_IKEA_-_Order:_12175150?=
+MIME-Version: 1.0
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+X-EXCLAIMER-MD-CONFIG: a067920a-1928-4024-9272-e7ba21410a24
+X-EXCLAIMER-MD-CONFIG: 2160d8f7-699a-4cd6-bec4-c5bf2dcaa7f8
+
+<style type=3D"text/css">
+    p,table{
+            font-family: "Calibri","sans-serif";
+            font-size: 11pt;
+     }
+    table {
+        border-collapse: collapse;
+        text-align: center;
+    }
+   =20
+    p {
+       line-height: 30px;
+    }
+   =20
+    th {
+        vertical-align: bottom;
+        padding: 8px;
+        background-color: #963634;
+        color: white;
+    }
+    td {
+        padding: 8px;
+        vertical-align: bottom;
+    }
+   =20
+    table,td {
+        border: 1px solid #ddd;
+    }
+</style>
+
+
+<p>Estimado proveedor:</p>
+
+    <p>
+        <span>Le informamos que las =C3=B3rdenes de trabajo </span>
+        <span>3622696</span>
+        <span> correspondientes al pedido </span>
+        <span>12175150</span>
+                            <span> se han marcado como resueltas.</span>
+            </p>=20
+
+
+<p>
+    <span>En caso de dudas referentes al sistema, por favor contacte a trav=
+=C3=A9s de </span>
+    <a href=3D"mailto:extranetsupport@inditex.com">extranetsupport@inditex.=
+com</a>
+    <span>; +34 981186100.</span>
+</p>
+<p>Por favor, no conteste a esta notificaci=C3=B3n.</p>
+<p>Muchas gracias.</p>
+
+<hr/>
+
+<p>Dear supplier:</p>
+
+    <p>
+        <span>We are pleased to inform you that the work orders </span>
+        <span>3622696</span>
+        <span>  corresponding to the purchase order </span>
+        <span>12175150</span>
+        <span> have been </span>
+                    <span> resolved.</span>
+            </p>
+
+
+<p>
+    <span>In case of doubts regarding the system, please get in touch with =
+</span>
+    <a href=3D"mailto:extranetsupport@inditex.com">extranetsupport@inditex.=
+com</a>
+    <span>; +34 981186100.</span>
+</p>
+<p>Please, do not reply to this notification.</p>
+<p>Thank you.</p>

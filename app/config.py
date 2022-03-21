@@ -29,7 +29,8 @@ LOGGING = {
         "": {
             "handlers": ["stream", "to_file"],
             "level": INFO,
-        }
+        },
+        "management": {"handlers": ["stream"], "level": INFO},
     },
 }
 

@@ -22,9 +22,20 @@ class Order(BaseModel):
     date: datetime
 
 
-class Parser(ABC):
+class ClosureAct(BaseModel):
+    order_id: int
+    date: datetime
+
+
+class OrderParser(ABC):
     @abstractmethod
     def parse(self, path: Path) -> Order:  # pragma: no cover
+        ...
+
+
+class ClosureActParser(ABC):
+    @abstractmethod
+    def parse(self, path: Path) -> ClosureAct:  # pragma: no cover
         ...
 
 
@@ -37,6 +48,10 @@ class Item(ABC):
 class Storage(ABC):
     @abstractmethod
     def add_order(self, order: Order):  # pragma: no cover
+        ...
+
+    @abstractmethod
+    def close_order(self, act: ClosureAct):  # pragma: no cover
         ...
 
     @abstractmethod

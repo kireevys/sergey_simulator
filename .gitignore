@@ -144,3 +144,6 @@ storage/
 emails/
 emails-o
 test.py
+closure/*
+app.log*
+index.db
